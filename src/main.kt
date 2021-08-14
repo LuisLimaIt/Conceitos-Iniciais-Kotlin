@@ -27,6 +27,10 @@ fun hello(nome: String) : String {
     return "Olá, $nome"
 }
 
+fun hello2(nome: String) = "Olá, $nome"
+
+fun soma(a: Int, b: Int) = a+b
+
 fun main() {
 
     val a = 10
@@ -36,8 +40,9 @@ fun main() {
     calculaBonus(a, b, c)
 
     println(hello("Luis"))
-
     println("Olá mundo!")
+    println(soma(5,10))
+
 
     //Variáveis mutáveis
     var nome = "Luis"
