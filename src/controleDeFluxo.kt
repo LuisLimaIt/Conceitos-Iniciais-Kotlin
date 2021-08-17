@@ -1,15 +1,13 @@
 fun calcularBonus(cargo: String, salario: Float) : Float {
     // Gerente Júnior, Gerente Sênior, Coordenador
 
-    val bonus: Float
-    if(cargo == "Coordenador") {
-        bonus = salario * 0.2f
+    return if(cargo == "Coordenador") {
+        salario * 0.2f
     } else if (cargo == "Gerente Júnior") {
-        bonus = salario * 0.5f
+        salario * 0.5f
     } else {
-        bonus = salario * 2
+        salario * 2
     }
-    return bonus
 }
 
 // if - else
@@ -27,6 +25,14 @@ fun maiorDeIdade2(idade: Int): Boolean {
 }
 
 fun main() {
+
+    val valor = 10
+    /// Operador Ternário no Java
+    // String str = valor == 10 ? "Sim" : "Não";
+
+    // "Operador Ternário" no Kotlin
+    val str = if (valor == 10) "Sim" else "Não"
+
     maiorDeIdade(23)
     maiorDeIdade(10)
     maiorDeIdade(74)
@@ -37,5 +43,4 @@ fun main() {
     println(calcularBonus("Coordenador", 1500f))
     println(calcularBonus("Gerente Júnior", 2000f))
     println(calcularBonus("Gerente Sênior", 3000f))
-
 }
